@@ -3,8 +3,10 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const Auth = require('./auth-model.js');
-const secrets = require('../config/secretConfig.js')
-const validateAccountData = require('./validateAccountData.js')
+const secrets = require('../config/secretConfig.js');
+const validateAccountData = require('./validateAccountData.js');
+const authMiddleware = require('./authenticate-middleware.js');
+
 
 
 router.post('/register', validateAccountData, (req, res) => {
@@ -42,6 +44,17 @@ router.post('/login', validateAccountData, (req, res) => {
     });
 });
 
+router.get('/users', authMiddleware, (req, res) => {
+
+  Auth.find()
+    .then(users => {
+      res.status(200).json(users);
+    })
+    .catch(error => {
+      res.status(500).json({ message: 'Cannot get the list of users', error} );
+    });
+});
+
 function generateToken(user) {
   const payload = {
     username: user.username,
@@ -54,6 +67,21 @@ function generateToken(user) {
 
   return jwt.sign(payload, secrets.jwtSecret, options);
 }
+
+
+function generateToken(user) {
+  const payload = {
+    username: user.username,
+    subject: user.id
+  };
+  
+  const options = {
+    expiresIn: '2h',
+  }
+
+  return jwt.sign(payload, secrets.jwtSecret, options);
+}
+
 
 
 module.exports = router;
