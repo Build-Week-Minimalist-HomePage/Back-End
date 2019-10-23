@@ -6,6 +6,7 @@ const authenticate = require('../auth/authenticate-middleware.js');
 const authRouter = require('../auth/auth-router.js');
 const notesRouter = require('../notes/notes-router.js');
 const linksRouter = require('../links/links-router.js');
+const configRouter = require('../config/config-router.js');
 
 const logger = (req, res, next) => {
     console.log(`[${new Date().toISOString()}] Was method "${req.method}" to address "${req.path}"`);
@@ -22,6 +23,7 @@ server.use(logger);
 server.use('/api/auth', authRouter);
 server.use('/api/notes', notesRouter);
 server.use('/api/links', linksRouter);
+server.use('/api/config', configRouter);
 
 server.get('/', (req, res) => {
     res.send("It's alive!");
