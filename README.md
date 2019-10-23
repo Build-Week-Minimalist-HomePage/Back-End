@@ -69,21 +69,21 @@ response:
 
 # Internal part
 
-**Notes**
+## Notes
 
-## GET list of notes {with token}
+**GET list of notes {with token}**
 
 [] GET ==> http://bw-homepage.herokuapp.com/api/notes
 
-## GET note by id {with token}
+**GET note by id {with token}**
 
 [] GET ==> http://bw-homepage.herokuapp.com/api/notes/:id
 
-## Get note by id for user {with token}
+**Get note by id for user {with token}**
 
 [] GET ==> http://bw-homepage.herokuapp.com/api/notes/user/:id
 
-## Add new note {with token}
+**Add new note {with token}**
 
 [] POST ==> http://bw-homepage.herokuapp.com/api/notes/
 
@@ -94,7 +94,7 @@ response:
 }
 ```
 
-## Edit note {with token}
+**Edit note {with token}**
 
 [] PUT ==> http://bw-homepage.herokuapp.com/api/notes/:id
 
@@ -105,27 +105,27 @@ response:
 }
 ```
 
-## Delete note {with token}
+**Delete note {with token}**
 
 [] DELETE ==> http://bw-homepage.herokuapp.com/api/notes/:id
 
 
 
-**links**
+## links
 
-## GET list of links {with token}
+**GET list of links {with token}**
 
 [] GET ==> http://bw-homepage.herokuapp.com/api/links
 
-## GET link by id {with token}
+**GET link by id {with token}**
 
 [] GET ==> http://bw-homepage.herokuapp.com/api/links/:id
 
-## Get link by id for user {with token}
+**Get link by id for user {with token}**
 
 [] GET ==> http://bw-homepage.herokuapp.com/api/links/user/:id
 
-## Add new link {with token}
+**Add new link {with token}**
 
 [] POST ==> http://bw-homepage.herokuapp.com/api/links/
 
@@ -137,7 +137,7 @@ response:
 }
 ```
 
-## Edit link {with token}
+**Edit link {with token}**
 
 [] PUT ==> http://bw-homepage.herokuapp.com/api/links/:id
 
@@ -149,28 +149,28 @@ response:
 }
 ```
 
-## Delete link {with token}
+**Delete link {with token}**
 
 [] DELETE ==> http://bw-homepage.herokuapp.com/api/links/:id
 
 
 
 
-**Config**
+## Config
 
-## GET list of configs {with token}
+**GET list of configs {with token}**
 
 [] GET ==> http://bw-homepage.herokuapp.com/api/config
 
-## GET config by id {with token}
+**GET config by id {with token}**
 
 [] GET ==> http://bw-homepage.herokuapp.com/api/config/:id
 
-## Get config by id for user {with token}
+**Get config by id for user {with token}**
 
 [] GET ==> http://bw-homepage.herokuapp.com/api/config/user/:id
 
-## Add new config {with token}
+**Add new config {with token}**
 
 [] POST ==> http://bw-homepage.herokuapp.com/api/config/
 
@@ -186,7 +186,7 @@ response:
     }
 ```
 
-## Edit config {with token}
+**Edit config {with token}**
 
 [] PUT ==> http://bw-homepage.herokuapp.com/api/config/:id
 
@@ -202,6 +202,6 @@ response:
     }
 ```
 
-## Delete config {with token}
+**Delete config {with token}**
 
 [] DELETE ==> http://bw-homepage.herokuapp.com/api/config/:id
