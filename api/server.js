@@ -21,9 +21,9 @@ server.use(express.json());
 server.use(logger);
 
 server.use('/api/auth', authRouter);
-server.use('/api/notes', notesRouter);
-server.use('/api/links', linksRouter);
-server.use('/api/config', configRouter);
+server.use('/api/notes', authenticate, notesRouter);
+server.use('/api/links', authenticate, linksRouter);
+server.use('/api/config', authenticate, configRouter);
 
 server.get('/', (req, res) => {
     res.send("It's alive!");
