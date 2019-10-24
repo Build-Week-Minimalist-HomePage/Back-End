@@ -22,11 +22,6 @@ server.use(cors());
 server.use(express.json());
 server.use(logger);
 
-// server.use((req, res, next) => {
-//   res.header('Access-Control-Allow-Origin', '*');
-//   next();
-// });
-
 
 server.use('/api/auth', authRouter);
 server.use('/api/notes', authenticate, notesRouter);
