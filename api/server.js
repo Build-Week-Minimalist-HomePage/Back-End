@@ -13,6 +13,11 @@ const logger = (req, res, next) => {
     next();
 }
 
+const allowHttp = ((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
+
 const server = express();
 
 server.use(helmet());
@@ -21,13 +26,15 @@ server.use(express.json());
 server.use(logger);
 
 server.use('/api/auth', authRouter);
-server.use('/api/notes', authenticate, notesRouter);
-server.use('/api/links', authenticate, linksRouter);
-server.use('/api/config', authenticate, configRouter);
+server.use('/api/notes', authenticate, allowHttp, notesRouter);
+server.use('/api/links', authenticate, allowHttp, linksRouter);
+server.use('/api/config', authenticate, allowHttp, configRouter);
 
 server.get('/', (req, res) => {
     res.send("It's alive!");
   });
   
+
+
 
 module.exports = server;
