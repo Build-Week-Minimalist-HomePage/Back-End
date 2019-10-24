@@ -14,7 +14,33 @@
 
 # Back-End
 
+ While having Google as your homepage may be a sensible choice, why not spice it up a little bit? The Minimalist Homepage is exactly what you'd imagine it is: stylish, functional, minimalist and modern. Choose from a set of themes (light, dark, etc) and from a number of widgets (TBD). And of course, the Google search bar will be there too. 
 
+ In this repo, you will find the backend portion of the application.
+
+ Hosted on [Heroku](https://bw-homepage.herokuapp.com/), the RESTful API was built with technologies such as Node.js, Express, and knex.
+
+### 🏠 [Homepage](https://github.com/Build-Week-Minimalist-HomePage/Back-End/blob/master/README.md)
+### 📲 [App Page](https://minimalist-homepage.netlify.com)
+### 📄 [API Docs](#)
+
+## Install
+
+```sh
+npm install
+```
+
+## Usage
+
+```sh
+npm run start
+```
+
+## Testing
+
+```sh
+npm run test
+```
 
 # Auth part
 
