@@ -16,7 +16,7 @@ const logger = (req, res, next) => {
 const server = express();
 
 var allowCrossDomain = function(req, res, next) {
-  console.log('AH?')
+  // console.log('AH?')
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Origin");
   res.header("Access-Control-Allow-Origin", "*");
   next();
