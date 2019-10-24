@@ -27,6 +27,7 @@ server.use(logger);
 //   next();
 // });
 
+
 server.use('/api/auth', authRouter);
 server.use('/api/notes', authenticate, notesRouter);
 server.use('/api/links', authenticate, linksRouter);
